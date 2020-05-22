@@ -1,0 +1,130 @@
+swagger: '2.0'
+
+info:
+  title: Task
+  description: Server service
+  version: v1
+  
+host: localhost:9000
+basePath: /kaiburr
+schemes:
+  - http
+
+produces:
+  - application/json
+
+parameters:
+  serverId:
+    name: serverId
+    in: query
+    required: false
+    type: string
+    
+paths:
+  /:
+      
+    get:
+      operationId: get
+      tags:
+        - Server
+      parameters:
+        - $ref: '#/parameters/serverId'
+      responses:
+        200:
+          description: Server matching request.
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Server'
+
+    put:
+      operationId: putServer
+      tags:
+        - Server
+      parameters:
+        - in: body
+          name: server
+          description: The server to create.
+          schema:
+            $ref: '#/definitions/Server'
+          required: true
+      responses:
+        201:
+          description: Server created succesfully.
+          schema:
+            $ref: '#/definitions/Server'
+        400:
+          description: Invalid request sent.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+
+  /{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+
+    get:
+      operationId: getServer
+      tags:
+        - Server
+      responses:
+        200:
+          description: Server matching given request.
+          schema:
+            $ref: '#/definitions/Server'
+        404:
+          description: Server not found .
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+
+    delete:
+      operationId: deleteServer
+      tags:
+        - Server
+      responses:
+        204:
+          description: Ok.
+        404:
+          description: Invalid Server id.
+          schema:
+            $ref: '#/definitions/ErrorResponse'
+
+
+definitions:
+
+  Server:
+    type: object
+    required:
+      - id
+      - name
+      - language
+      - framework
+     
+    properties:
+      name:
+        type: string
+      id:
+        type: string
+        description: Unique identifier for the Server
+     
+      language:
+        type: string
+        description: Identifier of the category this filter is associated to, if any.
+      framework:
+        type: string
+        description: Identifier of the attribute this filter is associated to.
+        
+  ErrorResponse:
+    type: object
+    required:
+      - error
+      - message
+    properties:
+      error:
+        type: string
+        description: A short reason phrase describing the status.
+      message:
+        type: string
+        description: A descriptive message explaining the error.
