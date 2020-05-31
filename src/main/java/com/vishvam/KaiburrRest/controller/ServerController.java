@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins="*",allowHeader="*")
 public class ServerController {
 
     private final ServerService serverService;
