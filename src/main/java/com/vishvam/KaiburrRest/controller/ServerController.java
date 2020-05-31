@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
+@RestController
 public class ServerController {
 
     private final ServerService serverService;
@@ -41,7 +41,7 @@ public class ServerController {
 
     @GetMapping("/")
     public ResponseEntity<List<Server>> getServers(){
-        System.out.println("Fetching all servers");
+        System.out.println("Fetching all servers for you");
         List<Server> s = serverService.findAll();
         if(!s.isEmpty()){
             return new ResponseEntity<>(s,HttpStatus.OK);
