@@ -48,8 +48,8 @@ docker-compose up -d
 
 ### Server URL
 
-* Base URL for the API: `139.59.78.167:8080`
-* VM Monitoring: `http://139.59.78.167:19999/#menu_system_submenu_ram;theme=slate`
+* Base URL for the API: `134.209.153.237:8080`
+* VM Monitoring: `http://134.209.153.237:19999/#menu_system_submenu_ram;theme=slate`
 
 ---
 
