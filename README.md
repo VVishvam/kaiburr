@@ -38,7 +38,7 @@ docker-compose up -d
 | Description | Method | Payload | Response |
 |:--:|:--:|:--:|:--:|
 | Insert data | PUT | name,id,language,framework as JSON | Status: 201 |
-| Read all data | GET | | status 200, data name,id,language,framework as JSON |
+| Read all data | GET | `134.209.153.237:8080/` | status 200, data name,id,language,framework as JSON |
 | Read by ID | GET | url parameter `134.209.153.237:8080/{id}` | status 200 name,id,language,framework as JSON|
 | Delete by ID | DELETE | url parameter `134.209.153.237:8080/{id}` | 200 |
 
