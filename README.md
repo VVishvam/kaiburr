@@ -39,10 +39,8 @@ docker-compose up -d
 |:--:|:--:|:--:|:--:|
 | Insert data | PUT | name,id,language,framework as JSON | Status: 201 |
 | Read all data | GET | | status 200, data name,id,language,framework as JSON |
-| Read by ID | GET | url parameter `localhost:8080/{id}` | status 200 name,id,language,framework as JSON|
-| Delete by ID | DELETE | url parameter `localhost:8080/{id}` | 200 |
-
-![testing](./output.png)
+| Read by ID | GET | url parameter `134.209.153.237:6969/rest/user/{id}` | status 200 name,id,language,framework as JSON|
+| Delete by ID | DELETE | url parameter `134.209.153.237:6969/rest/user/{id}` | 200 |
 
 --- 
 
