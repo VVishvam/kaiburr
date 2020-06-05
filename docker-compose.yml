@@ -15,6 +15,15 @@ services:
       - 27017:27017
     volumes:
       - mongo:/data/db
+  swagger:
+    build: ../KaiburrRestApplication
+    container_name: swagger
+    ports:
+      - 6969:8080
+    depends_on:
+      - db
+
 
 volumes:
   mongo:
+
