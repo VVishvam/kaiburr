@@ -1,4 +1,4 @@
-## Kaiburr REST API
+## Kaiburr-Swagger REST API
 
 A task project for the Kaiburr recruitment process.
 
@@ -9,6 +9,7 @@ A task project for the Kaiburr recruitment process.
 * GET endpoints in spring boot
 * PUT endpoint in spring boot
 * DELETE endpoint in spring boot
+* Swagger UI
 * Dockerized image
 * Docker compose orchestration
 
@@ -18,6 +19,7 @@ A task project for the Kaiburr recruitment process.
 
 * OpenJDK 8
 * Maven
+* SpringFox
 * MongoDB
 * Docker (note that if you have docker then you do not need any of the above pre-requisites)
 
@@ -46,7 +48,7 @@ docker-compose up -d
 
 ### Server URL
 
-* Base URL for the API: `134.209.153.237:8080`
+* Base URL for the API: `134.209.153.237:6969/swagger-ui.html`
 * VM Monitoring: `http://134.209.153.237:19999/#menu_system_submenu_ram;theme=slate`
 
 ---
