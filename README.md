@@ -1,4 +1,4 @@
-## Kaiburr-Swagger REST API
+## Kaiburr REST API
 
 A task project for the Kaiburr recruitment process.
 
@@ -9,7 +9,6 @@ A task project for the Kaiburr recruitment process.
 * GET endpoints in spring boot
 * PUT endpoint in spring boot
 * DELETE endpoint in spring boot
-* Swagger UI
 * Dockerized image
 * Docker compose orchestration
 
@@ -19,7 +18,6 @@ A task project for the Kaiburr recruitment process.
 
 * OpenJDK 8
 * Maven
-* SpringFox
 * MongoDB
 * Docker (note that if you have docker then you do not need any of the above pre-requisites)
 
@@ -41,15 +39,16 @@ docker-compose up -d
 |:--:|:--:|:--:|:--:|
 | Insert data | PUT | name,id,language,framework as JSON | Status: 201 |
 | Read all data | GET | | status 200, data name,id,language,framework as JSON |
-| Read by ID | GET | url parameter `134.209.153.237:6969/rest/user/{id}` | status 200 name,id,language,framework as JSON|
-| Delete by ID | DELETE | url parameter `134.209.153.237:6969/rest/user/{id}` | 200 |
+| Read by ID | GET | url parameter `134.209.153.237:8080/{id}` | status 200 name,id,language,framework as JSON|
+| Delete by ID | DELETE | url parameter `134.209.153.237:8080/{id}` | 200 |
 
+![testing](./output.png)
 --- 
 
 ### Server URL
 
-* Base URL for the API: `134.209.153.237:6969/swagger-ui.html`
-* VM Monitoring: `http://134.209.153.237:19999/#menu_system_submenu_ram;theme=slate`
+* Base URL for the API: `134.209.153.237:8080`
+* VM Monitoring: `http://134.209.153.237:8080/#menu_system_submenu_ram;theme=slate`
 
 ---
 
